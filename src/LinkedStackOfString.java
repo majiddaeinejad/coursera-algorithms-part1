@@ -1,4 +1,11 @@
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
 public class LinkedStackOfString implements StackOfString {
+
+    public LinkedStackOfString() {
+        first = new Node();
+    }
 
     private Node first;
 
@@ -15,11 +22,9 @@ public class LinkedStackOfString implements StackOfString {
     @Override
     public void push(String value) {
         Node oldFirst = first;
-        first.next = new Node();
+        first = new Node();
         first.item = value;
         first.next = oldFirst;
-
-
     }
 
     @Override
@@ -27,6 +32,20 @@ public class LinkedStackOfString implements StackOfString {
         String item = first.item;
         first = first.next;
         return item;
+    }
+
+    public static void main(String[] args) {
+        LinkedStackOfString linkedStackOfString = new LinkedStackOfString();
+
+        while (!StdIn.isEmpty()) {
+            String input = StdIn.readString();
+            if (input.equals("-")) {
+                StdOut.print(linkedStackOfString.pop() + " ");
+            } else {
+                linkedStackOfString.push(input);
+            }
+
+        }
     }
 
 }
