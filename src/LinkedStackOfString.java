@@ -3,11 +3,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class LinkedStackOfString implements StackOfString {
 
-    public LinkedStackOfString() {
-        first = new Node();
-    }
-
-    private Node first;
+    private Node first = null;
 
     private class Node {
         String item;
