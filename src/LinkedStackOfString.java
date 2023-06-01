@@ -16,10 +16,10 @@ public class LinkedStackOfString implements StackOfString {
     }
 
     @Override
-    public void push(String value) {
+    public void push(String item) {
         Node oldFirst = first;
         first = new Node();
-        first.item = value;
+        first.item = item;
         first.next = oldFirst;
     }
 

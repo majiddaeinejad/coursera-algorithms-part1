@@ -3,7 +3,7 @@ public interface StackOfString {
 
     boolean isEmpty();
 
-    void push(String value);
+    void push(String item);
 
     String pop();
 
