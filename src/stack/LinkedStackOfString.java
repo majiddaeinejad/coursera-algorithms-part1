@@ -1,7 +1,9 @@
+package stack;
+
 import java.util.NoSuchElementException;
 
 /**
- * The LinkedStackOfString class represents a stack data structure implemented using a linked list.
+ * The stack.LinkedStackOfString class represents a stack data structure implemented using a linked list.
  * It follows the Last-In-First-Out (LIFO) principle, where the last element added is the first one to be removed.
  * The class provides basic operations such as push, pop, isEmpty, and size to manipulate the stack.
  */
@@ -77,7 +79,7 @@ public class LinkedStackOfString implements StackOfString {
     }
 
     /**
-     * Main method to demonstrate the usage of the LinkedStackOfString class.
+     * Main method to demonstrate the usage of the stack.LinkedStackOfString class.
      * It takes a space-separated string as input and performs push and pop operations on the stack.
      * If an input element is "-", it performs a pop operation and prints the popped item.
      * Otherwise, it performs a push operation with the input element.

@@ -1,5 +1,4 @@
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
+package stack;
 
 import java.util.*;
 
@@ -71,7 +70,7 @@ public class FixedCapacityStackOfString implements StackOfString {
     }
 
     /**
-     * Main method to demonstrate the usage of the LinkedStackOfString class.
+     * Main method to demonstrate the usage of the stack.LinkedStackOfString class.
      * It takes a space-separated string as input and performs push and pop operations on the stack.
      * If an input element is "-", it performs a pop operation and prints the popped item.
      * Otherwise, it performs a push operation with the input element.

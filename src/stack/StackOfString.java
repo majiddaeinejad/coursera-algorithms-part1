@@ -1,3 +1,5 @@
+package stack;
+
 /**
  * By implementing this interface we can provide a stack data-structure that can:
  * 1- Push a string value into the stack
