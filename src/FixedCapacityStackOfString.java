@@ -29,6 +29,11 @@ public class FixedCapacityStackOfString implements StackOfString {
         return item;
     }
 
+    @Override
+    public int size() {
+        return N;
+    }
+
     public static void main(String[] args) {
         FixedCapacityStackOfString fixedCapacityStackOfString = new FixedCapacityStackOfString(10);
         while (!StdIn.isEmpty()) {
