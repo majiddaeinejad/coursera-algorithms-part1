@@ -27,9 +27,9 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        Integer[] input = {1,2,3,4,5,9,8,7,6};
+        Integer[] input = {1, 2, 3, 4, 5, 9, 8, 7, 6};
         sort(input);
-        for(int i=0;i<input.length;i++){
+        for (int i = 0; i < input.length; i++) {
             System.out.print(input[i]);
         }
 
