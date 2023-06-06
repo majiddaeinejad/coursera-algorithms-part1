@@ -1,9 +1,7 @@
 package queue;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.Stack;
 
 /**
  * The {@code ResizingArrayQueue} class represents a first-in-first-out (FIFO)
