@@ -1,17 +1,26 @@
 package sort.elementary;
 
-import edu.princeton.cs.algs4.Insertion;
-
-import java.util.Arrays;
-
+/**
+ * Insertion Sort Algorithm
+ * 1. Start with an unsorted array.
+ * 2. Iterate through the unsorted subarray from left to right, starting from the second element (index 1).
+ * 3. Store the current element in a temporary variable.
+ * 4. Compare the current element with the elements to its left, moving them one position to the right
+ *      until find the correct position for the current element or reach the beginning of the array.
+ * 5. Insert the current element into its correct position in the sorted subarray.
+ * 6. Repeat steps 2 to 5 for each element in the unsorted subarray.
+ * 7. The algorithm terminates, and the array is sorted.
+ */
 public class InsertionSort {
 
     public static void sort(Comparable a[]) {
         int N = a.length;
+        if (N < 2)
+            return;
 
-        for (int i = 0; i < N; i++) {
-            for (int j = i; j > 0; j--)  //traversal the array from right to left to find object less than right one
-                if (less(a[j], a[j - 1]))   //compare if is less then exchange
+        for (int i = 1; i < N; i++) {
+            for (int j = i; j > 0; j--)
+                if (less(a[j], a[j - 1]))
                     exch(a, j, j - 1);
                 else
                     break;
