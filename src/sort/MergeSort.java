@@ -1,6 +1,5 @@
 package sort;
 
-import java.util.Arrays;
 
 /**
  1. If the array has fewer than two elements, it is already considered sorted. Return the array as the result.
