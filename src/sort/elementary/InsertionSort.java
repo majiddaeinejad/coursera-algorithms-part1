@@ -2,14 +2,13 @@ package sort.elementary;
 
 /**
  * Insertion Sort Algorithm
- * 1. Start with an unsorted array.
- * 2. Iterate through the unsorted subarray from left to right, starting from the second element (index 1).
- * 3. Store the current element in a temporary variable.
- * 4. Compare the current element with the elements to its left, moving them one position to the right
- *      until find the correct position for the current element or reach the beginning of the array.
- * 5. Insert the current element into its correct position in the sorted subarray.
- * 6. Repeat steps 2 to 5 for each element in the unsorted subarray.
- * 7. The algorithm terminates, and the array is sorted.
+ * 1- Start with an unsorted array.
+ * 2- Iterate through the unsorted subarray from left to right.
+ * 3- Compare the current element with left one
+ * 4- If the left element is larger than current then exchange it and decrement the current index otherwise go to step 6
+ * 5- Repeat steps 3 to 4 for each element until current index is 0
+ * 6- Repeat steps 2 to 5 for each element in the unsorted subarray.
+ * 7- The algorithm terminates, and the array is sorted.
  */
 public class InsertionSort {
 
