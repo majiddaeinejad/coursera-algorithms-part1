@@ -2,6 +2,19 @@ package sort.elementary;
 
 import edu.princeton.cs.algs4.Shell;
 
+/**
+ * Shell Sort starts with a larger gap and gradually reduces the gap until it reaches 1,
+ * performing Insertion Sort on subarrays with decreasing gaps. The final pass with a gap of 1 ensures that the array is completely sorted.
+ * 1. Start with an unsorted array.
+ * 2. Define an increment sequence, which determines the gap between elements to be compared and sorted.
+ * 3. Initialize the increment value, typically the largest value from the chosen increment sequence.
+ * 4. Iterate through the array, considering subarrays of elements that are "increment" positions apart.
+ * 5. Within each subarray, perform an Insertion Sort on the elements, comparing each element with the previous elements in the subarray and inserting it into its correct position.
+ * 6. Reduce the increment value to a smaller value from the chosen increment sequence.
+ * 7. Repeat steps 4 to 6 until the increment value becomes 1.
+ * 8. Perform a final Insertion Sort pass on the array with an increment value of 1 to completely sort the array.
+ * 9. The algorithm terminates, and the array is sorted.
+ */
 public class ShellSort {
     public static void sort(Comparable[] a) {
         int n = a.length;
