@@ -1,6 +1,5 @@
 package sort;
 
-import java.util.Arrays;
 
 /**
  * 1. Select a pivot element from the array (typically the last element in the array).
@@ -12,11 +11,11 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
-    public static void sort(Comparable a[]) {
+    private static void sort(Comparable a[]) {
         sort(a, 0, a.length - 1);
     }
 
-    public static void sort(Comparable a[], int lo, int hi) {
+    private static void sort(Comparable a[], int lo, int hi) {
         if (lo < hi) {
             int partition = partition(a, lo, hi);
             sort(a, lo, partition - 1);
@@ -24,7 +23,7 @@ public class QuickSort {
         }
     }
 
-    public static int partition(Comparable a[], int lo, int hi) {
+    private static int partition(Comparable a[], int lo, int hi) {
         Comparable pivot = a[hi];
         int i = lo - 1;
         for (int j = lo; j < hi; j++) {
@@ -37,11 +36,11 @@ public class QuickSort {
         return i + 1;
     }
 
-    public static boolean less(Comparable v, Comparable w) {
+    private static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) <= 0;
     }
 
-    public static void exch(Comparable a[], int i, int j) {
+    private static void exch(Comparable a[], int i, int j) {
         Comparable temp = a[i];
         a[i] = a[j];
         a[j] = temp;
