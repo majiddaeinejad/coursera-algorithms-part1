@@ -20,12 +20,12 @@ package sort;
  *    - Once all elements are extracted, the array will contain the input elements in sorted order.
  *
  */
-public class HeapSort {
+public class RecursiveHeapSort {
 
 
-    private static void heapSort(int[] arr){
+    private static void heapSort(int[] arr) {
         int n = arr.length;
-        buildMaxHeap(arr,n);
+        buildMaxHeap(arr, n);
 
         // Extract elements from the heap
         for (int i = n - 1; i > 0; i--) {
@@ -71,7 +71,7 @@ public class HeapSort {
 
 
     public static void main(String[] args) {
-        int[] arr = { 12, 11, 13, 5, 6, 7 };
+        int[] arr = {27, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9, 0};
         heapSort(arr);
 
         System.out.println("Sorted array:");
