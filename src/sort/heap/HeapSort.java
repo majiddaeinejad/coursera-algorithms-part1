@@ -1,4 +1,4 @@
-package sort;
+package sort.heap;
 
 /**
  * Princeton University Heap Sort without using recursive method

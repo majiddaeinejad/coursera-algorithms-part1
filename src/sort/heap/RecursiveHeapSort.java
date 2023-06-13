@@ -1,4 +1,4 @@
-package sort;
+package sort.heap;
 
 /**
  * 1. Build a MaxHeap from the input array:
