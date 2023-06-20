@@ -23,15 +23,15 @@ public class HeapSort {
         int n = arr.length;
 
         // Build MaxHeap
-        for (int k = n/2; k >= 1; k--) {
+        for (int k = n/2-1; k >= 0; k--) {
             sink(arr, k, n);
         }
 
         // Perform the sort
-        int k = n;
-        while (k > 1) {
-            exch(arr, 1, k);
-            sink(arr, 1, --k);
+        int k = n - 1;
+        while (k > 0) {
+            exch(arr, 0, k);
+            sink(arr, 0, --k);
         }
     }
 
@@ -46,13 +46,13 @@ public class HeapSort {
     }
 
     private static boolean less(Comparable[] arr, int i, int j) {
-        return arr[i-1].compareTo(arr[j-1]) < 0;
+        return arr[i].compareTo(arr[j]) < 0;
     }
 
     private static void exch(Comparable[] arr, int i, int j) {
-        Comparable swap = arr[i-1];
-        arr[i-1] = arr[j-1];
-        arr[j-1] = swap;
+        Comparable swap = arr[i];
+        arr[i] = arr[j];
+        arr[j] = swap;
     }
 
     public static void main(String[] args) {
